@@ -1,0 +1,21 @@
+#contact {
+  background-color: #000;
+}
+
+#contact p {
+  text-align: center;
+  line-height: 1.2;
+}
+#contact .contact__links {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  margin: 0 auto;
+}
+#contact .contact__links a {
+  font-size: 25px;
+}
+
+#contact .contact__links a:hover {
+  color: #f9004d;
+}

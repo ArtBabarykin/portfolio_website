@@ -1,0 +1,214 @@
+#home {
+  height: 100vh;
+  position: relative;
+}
+
+#home::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.75;
+  z-index: 0;
+}
+
+#home video {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#home header {
+  display: flex;
+  align-items: center;
+  padding: 1.65rem;
+  position: relative;
+  justify-content: space-between;
+  transition: background-color 0.5s ease;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+#home header.active {
+  background-color: #191919;
+}
+
+#home .header__links {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+#home .header__links a {
+  font-size: 1.1rem;
+  transition: 0.2s ease;
+}
+
+#home .header__links a:hover {
+  color: #f9004d;
+}
+
+#home .navbar {
+  display: flex;
+}
+#home .navbar li {
+  margin: 0 1rem;
+}
+
+#home li.nav__item a {
+  font-size: 1rem;
+  transition: 0.2s ease;
+  color: white;
+  text-shadow: 0.1px 0.1px 1px black;
+}
+#home li.nav__item a:hover {
+  color: #f9004d;
+}
+
+#home .home__content {
+  z-index: 1;
+  position: relative;
+}
+
+#home .home__content h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(198, 201, 216, 0.75) !important;
+  text-shadow: 0.5px 0.5px 1px black;
+}
+
+#home .home__content h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: Montserrat, sans-serif;
+  padding: 2.75rem 0 0.65rem;
+  line-height: 1.05;
+  text-shadow: 0.5px 0.5px 1px black;
+}
+
+#home .home__content h3 {
+  font-size: 2.75rem;
+  font-weight: 400;
+  font-family: Monseratte, sans-serif;
+  color: #f9004d;
+  line-height: 1.05;
+  text-shadow: 0.5px 0.5px 1px black;
+}
+
+#home .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+#home .home__content {
+  line-height: 1.05;
+}
+
+/* Burger menu ------------------------------------*/
+#home .header__burger {
+  width: 30px;
+  height: 30px;
+  transition: all 0.5s ease-in-out;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#home .header__burger__lines,
+#home .header__burger__lines::before,
+#home .header__burger__lines::after {
+  width: 25px;
+  height: 1px;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+#home .header__burger__lines::before,
+#home .header__burger__lines::after {
+  content: "";
+  position: absolute;
+}
+
+#home .header__burger__lines::after {
+  transform: translateY(6px);
+}
+#home .header__burger__lines::before {
+  transform: translateY(-6px);
+}
+
+#home .header__burger.open .header__burger__lines {
+  transform: translateX(-25px);
+  background: transparent;
+}
+
+#home .header__burger.open .header__burger__lines::before {
+  transform: rotate(45deg) translate(17px, -17px);
+}
+#home .header__burger.open .header__burger__lines::after {
+  transform: rotate(-45deg) translate(17px, 17px);
+}
+
+@media (max-width: 768px) {
+  #home .header__burger {
+    display: flex;
+  }
+  #home header ul.navbar {
+    flex-direction: column;
+    background-color: #191919;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(100vw);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  #home header ul.navbar.open {
+    transform: translateX(0);
+  }
+  #home header ul.navbar li {
+    padding: 1.65rem 0;
+  }
+  #home header ul.navbar li a {
+    font-size: 3vh;
+  }
+  #home .container {
+    justify-content: center;
+  }
+  #home .home__content {
+    text-align: center;
+  }
+  #home .home__content h2 {
+    font-weight: 300;
+  }
+  #home .home__content h1 {
+    font-size: 2.6rem;
+    padding-top: 5rem;
+  }
+  #home .home__content h3 {
+    font-size: 1.7rem;
+    padding-top: 0.625rem;
+  }
+  #home li.nav__item a {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}

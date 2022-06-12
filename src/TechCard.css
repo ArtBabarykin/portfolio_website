@@ -1,0 +1,35 @@
+.techCard__box {
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #191919;
+  transition: all 0.4s ease-in-out;
+  margin: 5px;
+  height: 348px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.techCard__box:hover {
+  transform: translateY(5px);
+  background-image: linear-gradient(90deg, #f61b10, #ef0963);
+}
+.techCard__box:hover .techCard__icon,
+.techCard__box:hover p.techCard__text {
+  color: #fff;
+}
+
+.techCard__icon {
+  font-size: 54px;
+  font-weight: 400;
+  color: #f9004d;
+}
+h2.techCard__text {
+  font-weight: 400;
+  font-size: 19px;
+  padding: 10px 0;
+  font-family: Poppins, sans-serif;
+}
+p.techCard__text {
+  margin-bottom: 20px;
+}

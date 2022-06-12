@@ -1,38 +1,108 @@
-.App {
+section {
+  padding: 5.55rem 0;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
+  font-family: Poppins, sans-serif;
+}
+li {
+  list-style-type: none;
+}
+.heading {
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 20px;
   text-align: center;
+  font-family: Montserrat, sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 92%;
+  margin: 0px auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  overflow: hidden;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.col__2 {
+  width: 50%;
+  display: flex;
+  padding: 20px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+}
+.col__3 {
+  width: 33.333333%;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  flex-direction: column;
+}
+.col__6 {
+  width: 16.5%;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+svg {
+  stroke-width: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+strong {
+  color: #f9004d;
+  font-weight: 600;
+}
+
+p {
+  color: rgba(198, 201, 216, 0.75);
+  font-size: 1rem;
+  line-height: 30px;
+  font-family: Poppins, sans-serif;
+  margin-bottom: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 950px) {
+  .col__6 {
+    width: 33%;
   }
-  to {
-    transform: rotate(360deg);
+  .col__2 {
+    width: 100%;
+    padding-top: 0;
+  }
+  .col__3 {
+    width: 50%;
+  }
+  .heading {
+    text-align: center;
+    margin-bottom: 1.38rem;
+    font-size: 2.77rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  .col__6 {
+    width: 50%;
+  }
+  .col__3 {
+    width: 100%;
+  }
+  .heading {
+    font-size: 2rem;
   }
 }
