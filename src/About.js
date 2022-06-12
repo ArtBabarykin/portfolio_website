@@ -3,7 +3,7 @@ import { CgChevronUpO } from "react-icons/cg";
 import "./About.css";
 
 function About() {
-  const aboutImg = "./avatar copy.jpg";
+  const aboutImg = "./photo_avatar.jpeg";
   window.addEventListener("scroll", () =>
     document
       .querySelector(".go_to_top")
@@ -14,7 +14,7 @@ function About() {
       <div className="container">
         <div className="row">
           <div className="col__2">
-            <img src={aboutImg} alt="about" />
+            <img src={aboutImg} alt="Artsiom Babarykin" />
           </div>
           <div className="col__2">
             <h3 className="heading">About Me</h3>
